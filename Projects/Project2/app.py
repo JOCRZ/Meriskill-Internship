@@ -7,7 +7,7 @@ from sklearn.preprocessing import StandardScaler
 
 
 
-model=pickle.load(open('model.pkl','rb'))
+model=pickle.load(open('model1.pkl','rb'))
 st.title("Women Dibetes Prediction")
 st.image("data//dib.jpg", width=500)
 
