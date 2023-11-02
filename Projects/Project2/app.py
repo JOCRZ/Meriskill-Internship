@@ -41,7 +41,7 @@ if nav == 'Prediction':
     if st.button("Predict"):
         value = predict_buy(age,glucose,bmi,ph,dpf)
         if value == 0:
-            st.success('Not Have Diabetes')
-        if value == 1:
             st.success('Have Diabetes')
+        if value == 1:
+            st.success('Not Have Diabetes')
     
