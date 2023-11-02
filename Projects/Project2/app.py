@@ -7,7 +7,7 @@ from sklearn.preprocessing import StandardScaler
 
 
 
-model=pickle.load(open('model1.pkl','rb'))
+model=pickle.load(open('model2.pkl','rb'))
 st.title("Women Dibetes Prediction")
 st.image("data//dib.jpg", width=500)
 
@@ -41,7 +41,7 @@ if nav == 'Prediction':
     if st.button("Predict"):
         value = predict_buy(age,glucose,bmi,ph,dpf)
         if value == 0:
-            st.success('Have Diabetes')
-        if value == 1:
             st.success('Not Have Diabetes')
+        if value == 1:
+            st.success('Have Diabetes')
     
