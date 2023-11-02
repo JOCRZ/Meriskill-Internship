@@ -28,11 +28,11 @@ def predict_buy(age,glucose,bmi,ph,dpf):
 if nav == 'Prediction':
     
     st.header('Probability to Buy Insurance')
-    age = st.number_input("Age")
+    age = st.text_input("Age")
     glucose = st.slider('Glucose Level',min_value=30, max_value=1000, value=70)
-    bmi = st.number_input('BMI value')
-    ph = st.number_input('Pregnancy History ( How many times?)')
-    dpf = st.number_input('Diabetes Pedigree Function')
+    bmi = st.text_input('BMI value')
+    ph = st.text_input('Pregnancy History ( How many times?)')
+    dpf = st.text_input('Diabetes Pedigree Function')
 
     
 
