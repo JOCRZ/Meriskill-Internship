@@ -21,11 +21,25 @@ if nav == 'Dashboard':
     st.title('Model Dashboard')
 
     st.markdown("""Model used Random Forest Classifier""")
-    kpi1,kpi2,kpi3,kpi4 = st.columns(4)
-    kpi1.metric(label= "Total Patients" ,value= df.shape[0])
-    kpi2.metric(label= "Total Dibetic Patients" ,value= len(df[df['Outcome'] == 1]))
-    kpi3.metric(label= "Total Non-Dibetic Patients" ,value= len(df[df['Outcome'] != 1]))
-    kpi4.metric(label="Mean Accuracy",value=0.766)
+    kpi1,kpi2,kpi3 = st.columns(3)
+    kpi1.metric(label= "Total Rows" ,value= df.shape[0])
+    kpi2.metric(label= "Total Columns" ,value= df.shape[1])
+    kpi3.metric(label="Mean Accuracy",value=0.766)
+
+
+    data_container1 = st.container()
+
+    with data_container1:
+        col1,col2= st.columns(2)
+        with col1:
+            st.image("data//features.png", width=300)
+        with col2:
+            st.image("data//cm.png", width=200)
+
+
+
+
+        
        
 
 def predict_buy(age,glucose,bmi,ph,dpf):
